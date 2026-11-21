@@ -1,0 +1,6 @@
+{
+  "name": "FLOU – Conexión que inspira | Internet por Fibra Óptica",
+  "description": "Sitio corporativo y comercial de FLOU, la red de Internet por Fibra Óptica de alta velocidad en Bahía Solano y el Pacífico chocoano (Consorcio Troncal Virtual del Pacífico).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
