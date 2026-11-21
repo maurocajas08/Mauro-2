@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Jura", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Official FLOU Brand Manual Palette */
+  --color-flou-blue: #0F47AF;
+  --color-flou-navy: #082458;
+  --color-flou-green: #B4E600;
+  --color-flou-orange: #FF8200;
+  --color-flou-orange-ink: #C25900;
+  --color-flou-canvas: #F5F8FD;
+  --color-flou-surface: #FFFFFF;
+  --color-flou-ink: #0D1B38;
+  --color-flou-muted: #425270;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #F5F8FD;
+    color: #0D1B38;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0F47AF;
+    outline-offset: 2px;
+  }
+
+  .dark-surface :focus-visible {
+    outline: 2px solid #B4E600;
+    outline-offset: 2px;
+  }
+}
+
+.lab-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(15, 71, 175, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 71, 175, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.lab-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
